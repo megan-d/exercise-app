@@ -6,4 +6,4 @@ query = QueryType()
 
 @query.field("exercises")
 def resolve_exercises(obj, info):
-    return "Hello World!!!!"
+    return "Here are your exercises..."

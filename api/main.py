@@ -38,3 +38,6 @@ type_defs = load_schema_from_path("schema/schema.graphql")
 schema = make_executable_schema(
     type_defs, query, mutation, snake_case_fallback_resolvers
 )
+
+if __name__ == "__main__":
+    app.run(debug=True)
