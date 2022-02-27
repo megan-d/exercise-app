@@ -28,6 +28,7 @@ packaging==21.3
 pathspec==0.8.1
 pluggy==1.0.0
 protobuf==3.15.8
+psycopg2==2.9.3
 py==1.11.0
 py2app==0.27
 pycodestyle==2.6.0
@@ -36,6 +37,7 @@ pylint==2.6.0
 pyparsing==3.0.7
 pytest==7.0.1
 pytest-watch==4.2.0
+python-dotenv==0.19.2
 regex==2020.11.13
 six==1.15.0
 SQLAlchemy==1.4.31
