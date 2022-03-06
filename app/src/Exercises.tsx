@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import Exercises from './Exercises';
 
 async function getExercises() {
   try {
@@ -20,17 +19,11 @@ async function getExercises() {
   }
 }
 
-function App() {
+function Exercises() {
   useEffect(() => {
     getExercises();
   }, []);
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>Exercise App</p>
-      </header>
-    </div>
-  );
+  return <div></div>;
 }
 
-export default App;
+export default Exercises;
