@@ -4,13 +4,13 @@ schema {
 }
 
 type Exercise {
-  id: ID!
-  desciption: String!
+  id: String!
+  description: String!
 }
 
 type Query {
-  exercises: String!
-  exercise(exerciseId: ID!): Exercise!
+  getExercises: [Exercise]
+  getExercise(exerciseId: ID!): Exercise!
 }
 
 type Mutation {

@@ -4,7 +4,7 @@ from ariadne import graphql_sync
 from api import app, db, engine
 from api.schema.mutation.mutations import resolve_add_exercise
 from api.schema.query.queries import resolve_exercises
-from flask import request, jsonify
+from flask import request, jsonify, Flask
 from ariadne.constants import PLAYGROUND_HTML
 from ariadne import (
     load_schema_from_path,
@@ -13,6 +13,10 @@ from ariadne import (
     snake_case_fallback_resolvers,
     ObjectType,
 )
+from flask_cors import CORS, cross_origin
+
+app = Flask(__name__)
+CORS(app, resources={r"*": {"origins": "*"}})
 
 
 @app.route("/graphql", methods=["GET"])
@@ -30,7 +34,7 @@ def graphql_server():
 
 query = ObjectType("Query")
 
-query.set_field("exercises", resolve_exercises)
+query.set_field("getExercises", resolve_exercises)
 
 mutation = ObjectType("Mutation")
 

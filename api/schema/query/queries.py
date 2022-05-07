@@ -4,6 +4,7 @@ from ariadne import QueryType
 query = QueryType()
 
 
-@query.field("exercises")
+@query.field("getExercises")
 def resolve_exercises(obj, info):
-    return "Here are your exercises..."
+    print("Here are your exercises...")
+    return {"id": "5", "description": "hi"}
