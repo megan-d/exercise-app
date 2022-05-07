@@ -9,7 +9,7 @@ type Exercise {
 }
 
 type Query {
-  getExercises: [Exercise]
+  getExercises: String!
   getExercise(exerciseId: ID!): Exercise!
 }
 
